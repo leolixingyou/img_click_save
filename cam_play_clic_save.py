@@ -78,9 +78,12 @@ class Image_click:
             cv2.putText(cur_img_msg, text, (10 + idx*150, y_offset), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255,0,0), 2, lineType=cv2.LINE_AA)
 
         window_name = "cur_img_msg"
-        # cv2.namedWindow(window_name, cv2.WND_PROP_FULLSCREEN)
-        # cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-        cv2.namedWindow(window_name)
+        ##full screen
+        cv2.namedWindow(window_name, cv2.WND_PROP_FULLSCREEN)
+        cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
+        ## window screen
+        # cv2.namedWindow(window_name)
         cv2.setMouseCallback(window_name, self.mouse_callback)
         cv2.imshow(window_name, cur_img_msg)
         
